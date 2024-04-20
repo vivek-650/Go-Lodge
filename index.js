@@ -27,9 +27,9 @@ const multer = require("multer");
 const {storage} = require("./cloudconfig.js")
 const upload  = multer({ storage })
 //models import
-const Listing = require("../Go Lodge/models/listing.js")
-const Review = require("../Go Lodge/models/review.js")
-const User = require("../Go Lodge/models/user.js");
+const Listing = require("./models/listing.js")
+const Review = require("./models/review.js")
+const User = require("./models/user.js");
 //Connection of Database
 const mongoose = require("mongoose");
 
