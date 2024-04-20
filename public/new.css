@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    
+}
+.page1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* background-color: peru; */
+}
+.file-input-container {
+    width: 400px;
+    height: 460px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(209, 209, 209, 0.548);
+    border-radius: 6%;
+    /* cursor: pointer; */
+    border: 3px dashed rgba(128, 128, 128, 0.301);
+  }
+
+  .file-input {
+    width: 400px;
+    height: 460px;
+    position: absolute;
+    font-size: 10px;
+    opacity: 0;
+    /* background-color: red; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    /* background-color: #4CAF50; */
+    color: rgba(65, 64, 64, 0.507);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6%;
+    z-index: -1;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* max-width: 300px; */
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0px 3px 8px #ccc; */
+    border-radius: 3%;
+    padding: 4px;
+    display: none;
+    /* z-index: 9; */
+  }
+  img.show {
+    display: block;
+  }
+.part1{
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+}
+.part2{
+  width: 50%;
+  height: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.card{
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  /* background-color: #e63939; */
+}
+.card>p{
+  color: rgb(107, 104, 104);
+  margin: 7px 0;
+
+}
+.input{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+  font-size: 18px;
+}
+input:focus{
+  outline: none;
+  border-color: rgba(128, 128, 128, 0.404);
+}
+.card>button{
+  width: 30%;
+  height: 10%;
+  border-radius: 10px;
+  border: none;
+  background-color: orangered;
+  margin: 10px 30%;
+}
+.card>button:hover{
+  background-color: rgb(255, 88, 28);
+}
+.textarea{
+    width: 100%;
+    height: 30%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 0 0 20% 1%;
+}
+.textarea:focus{
+    border: 1px solid grey;
+}
+.locinfo{
+    display: flex;
+    gap: 10PX;
+    margin-top: 20PX;
+}
+
+
+.input-validation {
+  position: absolute;
+  top: calc(100% + 5px);
+  font-size: 14px;
+  color: red;
+}
+
+.input-validation.success {
+  color: green;
+}

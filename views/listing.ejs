@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Lodge</title>
+    <link rel="icon" href="https://www.zarla.com/images/zarla-luxurinn-1x1-2400x2400-20230223-fcqr999km3qjkgbmv9fd.png?crop=1:1,smart&width=250&dpr=2">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/listing.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="/"><img src="/src/logo.png" alt="#blank"></a>
+        <div class="srch">
+            <form action="/listings/search" method="post">
+                <input type="text" name="location" id="location">
+                <button type="submit" class="bx bx-search"></button>
+            </form>
+        </div>
+        <div class="opt">
+            <a href="/profile"><i class='bx bx-user' ></i></a>
+            <i id="menu-icon" class='bx bx-menu'></i>
+            <div class="dropdown" id="menu-dropdown">
+                <!-- Dropdown content goes here -->
+                <a href="/listings/new">New Listing</a>
+                <!-- <a href="#">Menu Item 2</a> -->
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="icon-option">
+        <div class="tiles">
+            <i class="ri-fire-fill"></i>
+            <p>Trending</p>
+        </div>
+        <div class="tiles">
+            <i class='bx bxs-hotel'></i>
+            <p>Rooms</p>
+        </div>
+        <div class="tiles">
+            <i class="ri-building-fill"></i>
+            <p>Cities</p>
+        </div>
+        <div class="tiles">
+            <i class="ri-tent-fill"></i>
+            <p>Camping</p>
+        </div>
+        <div class="tiles">
+            <i class='bx bxs-castle' ></i>
+            <p>Castle</p>
+        </div>
+        <div class="tiles">
+            <i class="ri-snowy-fill"></i>
+            <p>Arctic</p>
+        </div>
+        <div class="tiles">
+            <i class='bx bx-swim' ></i>
+            <p>Pool</p>
+        </div>
+        <div class="tiles">
+            <i class="ri-flower-fill"></i>
+            <p>Garden</p>
+        </div>
+    </div>
+    <div class="container">
+        <% if(allListing.length == 0) { %>
+            <h1>No Such Result</h1>
+        <%}%>
+        <% for(let listing of allListing) { %>
+            <div class="cards">
+                <figure class="snip1246">
+                    <img src="<%= listing.image.url %>" alt="sample88"/>
+                    <div class="location"><p><%= listing.location %></p></div>
+                    <figcaption>
+                      <h2><%= listing.title %></h2>
+                      <p><%= listing.description%></p>
+                      <!-- <a href="" class="delete">Delete</a> -->
+                      <div class="price">₹ <%= listing.price %></div>
+                      <a href="/listings/<%= listing.id %>" class="add-to-cart">More</a>
+                    </figcaption>
+                </figure>
+            </div>
+        <%}%>
+    </div>
+    <div class="footer">
+        <div class="prt1">
+            <p><b>Useful Links</b></p>
+            <li>Company Information</li>
+            <li>Product Offerings</li>
+            <li>Coustomer Care</li>
+            <li>Careers</li>
+            <li>More</li>
+        </div>
+        <hr>
+        <div class="prt2">
+            <p><b>Social Media</b></p>
+            <div class="icon">
+                <i class='bx bxl-meta'></i>
+                <i class='bx bxl-instagram' ></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-youtube' ></i>
+            </div>
+        </div>
+        <hr>
+        <div class="prt3">
+            <p><b>Contact</b></p>
+            <li>Phone: xxx xxxx xxxx</li>
+            <li>Email: xyz@gmail.com</li>
+        </div>
+    </div>
+    <p class="copyright">Copyright © 2024 Go Lodge Limited, India. All rights reserved</p>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuIcon = document.getElementById('menu-icon');
+        var menuDropdown = document.getElementById('menu-dropdown');
+
+        menuIcon.addEventListener('click', function () {
+            // Toggle the visibility of the dropdown
+            // console.log("working")
+            if (menuDropdown.style.display === 'block') {
+                menuDropdown.style.display = 'none';
+            } else {
+                menuDropdown.style.display = 'block';
+            }
+        });
+
+        // Optional: Close the dropdown when clicking outside of it
+        document.addEventListener('click', function (event) {
+            if (!event.target.matches('#menu-icon') && !event.target.matches('#menu-dropdown')) {
+                menuDropdown.style.display = 'none';
+            }
+        });
+    });
+    (".hover").mouseleave(
+            function () {
+            (this).removeClass("hover");s
+            }
+        );
+</script>
+
+</html>
+
+
+

@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    width: 95%;
+    height: 9vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px #74737334;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22vw;
+    /* padding-left: 35px; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    margin: 2rem 0;
+    margin-left: 3%;
+    border-radius: 0.5rem;
+}
+.nav img{
+  width: 4.6vw;
+}
+.srch{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.srch input{
+  width: 30rem;
+  height: 2.5rem;
+  padding: 1rem;
+  font-size: 18px;
+  border: 1px solid rgba(78, 78, 78, 0.575);
+  border-radius: .3rem;
+}
+.srch button{
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+
+}
+.bx-search{
+  font-size: 1.5em;
+  position: relative;
+  top: .25rem;
+  /* left: ; */
+  /* margin-top: 1rem; */
+  right: 2.7rem;
+  cursor: pointer;
+  
+}
+.bx-search:hover{
+  color: orangered;
+}
+.bx-menu, .bx-user{
+    font-size: 2em;
+    color: black;
+}
+.bx-menu:hover, .bx-user:hover{
+  font-size: 2em;
+  color: orangered;
+}
+.nav a{
+    text-decoration: none;
+}
+.icon-option{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 80%;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.842);
+  border-radius: 2rem;
+  margin-left: 10rem;
+  margin-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+  z-index: 99;
+}
+.tiles{
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  text-align: center;
+  /* justify-content: space-between; */
+}
+.tiles i{
+  font-size: 1.5rem;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 100px; */
+    margin-left: 30px;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,800);
+.snip1246 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  margin-top: 2rem;
+  /* min-width: 220px;
+  max-width: 310px; */
+  width:250px;
+  height: 270px;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #dbd9d934;
+}
+.snip1246 * {
+  /* -webkit-box-sizing: padding-box; */
+  /* box-sizing: padding-box; */
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.snip1246 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  /* vertical-align: top; */
+  /* border-radius: 8px; */
+}
+.snip1246 figcaption {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+.snip1246 h2,
+.snip1246 p {
+  margin: 0 0 5px;
+}
+.snip1246 h2 {
+  font-weight: 600;
+}
+.snip1246 p {
+  font-size: 0.8em;
+}
+.snip1246 .price {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 20px;
+  padding: 0.2em 0em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.snip1246 .add-to-cart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  padding: 0.2em 0.5em;
+  border: 2px solid #141313;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+.snip1246 .add-to-cart:hover {
+  background-color: orangered;
+  color: #ffffff;
+}
+.snip1246:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+.snip1246:hover figcaption,
+.snip1246.hover figcaption {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.snip1246:hover:after,
+.snip1246.hover:after {
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+
+.location{
+    font-weight: 700;
+    opacity: 75%;
+    
+}
+.location>p{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.container{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5rem;
+  background-color: rgba(245, 245, 245, 0.438);
+  padding-left: 5.5rem;
+}
+/* .delete{
+  position: relative;
+  left: 40%;
+  top: 48%;
+  border: 2px solid #141313;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+.delete:hover{
+  background-color: orangered;
+  color: #ffffff;
+} */
+.footer{
+  width: 100%;
+  height: 40%;
+  background-color: rgba(241, 241, 241, 0.651);
+  display: flex;
+  padding: 3rem;
+  gap: 2rem;
+  margin-top: 10px;
+}
+.prt1{
+  display: flex;
+  align-items: start;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 33%;
+  height: 100%;
+  /* background-color: red; */
+}
+.prt1 p{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.prt1 li{
+  font-family: sans-serif;
+  font-size: 15px;
+  list-style: none;
+  line-height: 2rem;
+}
+.prt2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+  gap: 2rem;
+  /* background-color: green; */
+}
+.prt2 p{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.icon{
+  display: flex;
+  gap: 2em;
+}
+.icon i{
+  /* display: flex; */
+  /* flex-direction: row; */
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.prt3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 100%;
+  gap: 2rem;
+  /* background-color: blueviolet; */
+}
+.prt3 p{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.prt3 li{
+  list-style: none;
+}
+.copyright{
+  font-family: sans-serif;
+  position: relative;
+  bottom: 3%;
+  font-size: 15px;
+  margin-left: 35%;
+}
+
+
+
+/* Initially hide the dropdown */
+#menu-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#menu-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+#menu-dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown when the menu icon is hovered */
+/* #menu-icon:hover + #menu-dropdown {
+  display: block;
+} */

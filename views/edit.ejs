@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Lodge</title>
+    <link rel="stylesheet" href="/new.css">
+</head>
+<body>
+    <div class="page1">
+        <form method="post" action="/listings/<%=listing._id%>?_method=PUT"  class="page1" enctype="multipart/form-data">
+            <div class="part1">
+                <div class="file-input-container">
+                    <img src="" alt="">
+                    <input type="file" class="file-input" name="file" accept='image/*' onchange="showImage()">
+                    <label for="fileInput" class="custom-button">Select File</label>
+                </div>
+            </div>
+            <div class="part2">
+                <div class="card">
+                    
+                    <p>Title</p>
+                    <input type="text" name="title" value="<%= listing.title%>" class="input">
+                    <p>Description</p>
+                    <input type="text" name="description" value="<%= listing.description%>" class="textarea">
+                    <p>Price</p>
+                    <input type="text" name="price" value="<%= listing.price %>" class="input">
+                    <div class="locinfo">
+                        <div class="loc">
+                            <p>Location</p>
+                            <input type="text" name="location" value="<%= listing.location %>" class="input">
+                        </div>
+                        <div class="coun">
+                            <p>Country</p>
+                            <input type="text" name="country" value=<%= listing.country %> class="input">
+                        </div>
+                    </div>
+                    <button>Edit Listing</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        const imageuploader = document.querySelector("input");
+        const imagePreview = document.querySelector("img");
+
+        function showImage() {
+        let reader = new FileReader();
+        reader.readAsDataURL(imageuploader.files[0]);
+        reader.onload = function(e) {
+            imagePreview.classList.add("show");
+            imagePreview.src = e.target.result;
+        };
+        }
+
+    // const imageUploader = document.querySelector("input[name='image']");
+    const titleInput = document.querySelector("input[name='title']");
+    const descriptionInput = document.querySelector("input[name='description']");
+    const priceInput = document.querySelector("input[name='price']");
+    const locationInput = document.querySelector("input[name='location']");
+    const countryInput = document.querySelector("input[name='country']");
+    const form = document.querySelector("form");
+
+    // function showImage() {
+    //     let reader = new FileReader();
+    //     reader.readAsDataURL(imageUploader.files[0]);
+    //     reader.onload = function(e) {
+    //         imagePreview.classList.add("show");
+    //         imagePreview.src = e.target.result;
+    //     };
+    // }
+
+    function validateForm() {
+        let isValid = true;
+
+        // Reset borders to default
+        resetBorders();
+
+        // Check each input field
+
+        if (titleInput.value.trim() === "") {
+            isValid = false;
+            setInvalidBorder(titleInput);
+        }
+
+        if (descriptionInput.value.trim() === "") {
+            isValid = false;
+            setInvalidBorder(descriptionInput);
+        }
+
+        if (priceInput.value.trim() === "") {
+            isValid = false;
+            setInvalidBorder(priceInput);
+        }
+
+        if (locationInput.value.trim() === "") {
+            isValid = false;
+            setInvalidBorder(locationInput);
+        }
+
+        if (countryInput.value.trim() === "") {
+            isValid = false;
+            setInvalidBorder(countryInput);
+        }
+
+        return isValid;
+    }
+
+    function resetBorders() {
+        const inputs = document.querySelectorAll(".input");
+        inputs.forEach(input => {
+            input.style.borderColor = "green";
+        });
+    }
+
+    function setInvalidBorder(input) {
+        input.style.borderColor = "red";
+    }
+
+    form.addEventListener("submit", function(event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- enctype="multipart/form-data" -->
